@@ -72,6 +72,6 @@ Complete a month cost analysis of each Azure resource to give an estimate total 
 ## Architecture Explanation
 This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
 
-- Azure App Service: can scale horizontally and vertically
-- Azure Function App: high peformance and can be scalled
+- Performance: Divine Background job and App Web help they are better performance
 - Cost: Money saving because reasonable spending depending on the amount of access
+- Scaleability: Web app provide scale option (scale vertically and horizontally)
