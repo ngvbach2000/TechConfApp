@@ -62,12 +62,11 @@ def main(msg: func.ServiceBusMessage):
             print("PostgreSQL connection is closed")
 
 def send_email(email, subject, body):
-    if not app.config.get('SENDGRID_API_KEY'):
-        message = Mail(
-            from_email=app.config.get('EMAIL_ADDRESS'),
-            to_emails=email,
-            subject=subject,
-            plain_text_content=body)
+    message = Mail(
+        from_email=app.config.get('EMAIL_ADDRESS'),
+        to_emails=email,
+        subject=subject,
+        plain_text_content=body)
 
-        sg = SendGridAPIClient(app.config.get('SENDGRID_API_KEY'))
-        sg.send(message)
+    sg = SendGridAPIClient(app.config.get('SENDGRID_API_KEY'))
+    sg.send(message)
